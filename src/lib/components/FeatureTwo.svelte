@@ -191,12 +191,22 @@
   @media (max-width: 1200px) {
     .feature-container {
       flex-direction: column;
+      align-items: flex-start;
       height: auto;
       gap: 64px;
       padding: 60px 32px;
     }
 
     .feature-content {
+      width: 100%;
+    }
+
+    .feature-title {
+      font-size: 32px;
+    }
+
+    .list-item p {
+      font-size: 16px;
       width: 100%;
     }
 

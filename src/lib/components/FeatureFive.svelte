@@ -258,10 +258,18 @@
   @media (max-width: 1024px) {
     .cards-container {
       flex-direction: column;
-      padding: 0 32px 64px 32px;
+      padding: 0 20px 64px 20px;
     }
     .title-block {
-      padding: 64px 32px 32px 32px;
+      padding: 64px 20px 32px 20px;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .main-title {
+      font-size: 32px;
+    }
+    .subtitle {
+      text-align: left;
     }
   }
 </style>

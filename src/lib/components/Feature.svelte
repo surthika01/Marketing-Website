@@ -97,8 +97,16 @@
 
     .feature-content {
       width: 100%;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .feature-title {
+      font-size: 32px;
+    }
+
+    .feature-description {
+      font-size: 16px;
     }
 
     .feature-visual {

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import footerLogo from '$lib/assets/CometChat Logo.png';
 </script>
 
@@ -6,7 +7,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="logo-container">
-        <span class="logo">cometchat</span>
+        <a href="{base}/" class="logo">cometchat</a>
       </div>
     </div>
 

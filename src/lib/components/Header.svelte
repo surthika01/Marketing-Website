@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   let isMenuOpen = $state(false);
 
   function toggleMenu() {
@@ -8,7 +9,7 @@
 
 <header class="header">
   <div class="nav-container">
-    <a href="/" class="logo">cometchat</a>
+    <a href="{base}/" class="logo">cometchat</a>
 
     <!-- Desktop Menu (gap: 48px, width: ~500) -->
     <nav class="desktop-nav">
@@ -29,7 +30,7 @@
     <button
       class="mobile-menu-btn"
       aria-label="Toggle Menu"
-      on:click={toggleMenu}
+      onclick={toggleMenu}
     >
       <svg
         width="24"
@@ -48,13 +49,13 @@
 
   {#if isMenuOpen}
     <nav class="mobile-nav">
-      <a href="#platform" on:click={toggleMenu}>Platform</a>
-      <a href="#solutions" on:click={toggleMenu}>Solutions</a>
-      <a href="#developers" on:click={toggleMenu}>Developers</a>
-      <a href="#resources" on:click={toggleMenu}>Resources</a>
-      <a href="#pricing" on:click={toggleMenu}>Pricing</a>
-      <a href="#login" class="login-link" on:click={toggleMenu}>Log in</a>
-      <a href="#demo" class="btn btn-primary" on:click={toggleMenu}
+      <a href="#platform" onclick={toggleMenu}>Platform</a>
+      <a href="#solutions" onclick={toggleMenu}>Solutions</a>
+      <a href="#developers" onclick={toggleMenu}>Developers</a>
+      <a href="#resources" onclick={toggleMenu}>Resources</a>
+      <a href="#pricing" onclick={toggleMenu}>Pricing</a>
+      <a href="#login" class="login-link" onclick={toggleMenu}>Log in</a>
+      <a href="#demo" class="btn btn-primary" onclick={toggleMenu}
         >Schedule a demo</a
       >
     </nav>

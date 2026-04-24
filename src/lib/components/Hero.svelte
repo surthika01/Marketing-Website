@@ -197,14 +197,7 @@
     z-index: 2;
   }
 
-  .mock-ui {
-    padding: 24px;
-    border: 1px dashed rgba(255,255,255,0.2);
-    border-radius: 12px;
-    text-align: center;
-    color: rgba(255,255,255,0.5);
-    z-index: 1; /* Sits behind actual image if it loads */
-  }
+
 
   /* Trusted By Section (Parent Container) */
   .trusted-by-section {

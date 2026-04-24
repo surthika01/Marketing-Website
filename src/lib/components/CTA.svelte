@@ -7,7 +7,6 @@
 <section class="cta-section">
   <!-- The glowing planet background -->
   <div class="planet-bg">
-    <img src={ctaGlow} alt="Glow" class="glow-img" />
     <img src={ctaPlanet} alt="Planet glow" class="planet-img" />
   </div>
 
@@ -51,25 +50,12 @@
     height: 1434px;
     z-index: 1;
     pointer-events: none;
-    display: flex;
-    justify-content: center;
-  }
-
-  .glow-img {
-    position: absolute;
-    top: -100px;
-    width: 642px;
-    height: 400px;
-    opacity: 0.6;
-    z-index: 1;
   }
 
   .planet-img {
-    position: relative;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    z-index: 2;
   }
 
   .cta-container {

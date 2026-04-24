@@ -3,7 +3,7 @@
 ## Live Links
 
 - **GitHub Repository**: https://github.com/surthika01/Marketing-Website
-- **Live Hosted Link**: [Your Vercel/Netlify Link Here]
+- **Live Hosted Link**: https://surthika01.github.io/Marketing-Website/
 
 ## Implementation Notes
 

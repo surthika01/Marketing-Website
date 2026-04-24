@@ -7,7 +7,7 @@
     <!-- Left Content -->
     <div class="feature-content">
       <h2 class="feature-title">
-        Everything you'd end up<br />
+        Everything you'd end up<br class="desktop-br" />
         <span class="text-gradient">already done.</span>
       </h2>
 
@@ -133,6 +133,11 @@
     letter-spacing: 0;
     color: #fafaff;
     margin: 0;
+    text-align: left;
+  }
+
+  .desktop-br {
+    display: block;
   }
 
   .text-gradient {
@@ -199,20 +204,29 @@
 
     .feature-content {
       width: 100%;
+      align-items: flex-start;
+      text-align: left;
     }
 
     .feature-title {
       font-size: 32px;
+      text-align: left;
+    }
+
+    .desktop-br {
+      display: none;
     }
 
     .list-item p {
       font-size: 16px;
       width: 100%;
+      text-align: left;
     }
 
     .feature-visual {
       width: 100%;
       height: auto;
+      align-self: center;
     }
   }
 </style>

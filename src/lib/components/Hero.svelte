@@ -307,10 +307,19 @@
     }
 
     .hero-actions {
+      display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      height: auto;
+      flex-wrap: nowrap;
+      height: 44px;
       gap: 12px;
+      width: 100%;
+    }
+
+    .hero-actions .btn {
+      flex: 1;
+      padding: 0 12px;
+      white-space: nowrap;
+      font-size: 13px;
     }
 
     .hero-visual {

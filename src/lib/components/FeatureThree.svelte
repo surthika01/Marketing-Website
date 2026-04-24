@@ -10,8 +10,8 @@
       <div class="label">Production-ready chat UI</div>
       
       <h2 class="feature-title">
-        The UX layer your agent deserves.<br/>
-        Built for LLM-native interactions,<br/>
+        The UX layer your agent deserves.<br class="desktop-br" />
+        Built for LLM-native interactions,<br class="desktop-br" />
         out of the box.
       </h2>
       
@@ -132,6 +132,11 @@
     line-height: 1.06;
     color: #FAFAFF;
     margin: 0;
+    text-align: left;
+  }
+
+  .desktop-br {
+    display: block;
   }
 
   .feature-description {
@@ -205,16 +210,24 @@
   @media (max-width: 1200px) {
     .feature-container {
       flex-direction: column;
+      align-items: flex-start;
       gap: 64px;
     }
     
     .feature-content, .feature-visual {
       width: 100%;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .desktop-br {
+      display: none;
     }
     
     .feature-visual {
       height: auto;
       aspect-ratio: 1/1;
+      align-self: center;
     }
   }
 </style>

@@ -173,22 +173,32 @@
 
   @media (max-width: 768px) {
     .cta-title {
-      font-size: 36px;
+      font-size: 32px;
     }
     .cta-icon-wrapper {
       margin-bottom: 60px;
     }
     .planet-bg {
       top: 100px;
-      width: 120%; /* Stretch effect on mobile */
+      width: 120%; 
     }
     .cta-actions {
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 12px;
       width: 100%;
-      max-width: 300px;
+      max-width: 100%;
+      justify-content: center;
     }
     .btn-ghost, .btn-primary {
-      width: 100%;
+      flex: 1;
+      height: 44px;
+      padding: 0 12px;
+      font-size: 13px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 </style>

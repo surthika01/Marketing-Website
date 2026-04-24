@@ -10,7 +10,7 @@
       <div class="label">Multichannel notifications engine</div>
       
       <h2 class="feature-title">
-        Your agent is only helpful if people<br/>
+        Your agent is only helpful if people<br class="desktop-br" />
         come back to talk to it.
       </h2>
       
@@ -125,6 +125,11 @@
     line-height: 1.06;
     color: #FAFAFF;
     margin: 0;
+    text-align: left;
+  }
+
+  .desktop-br {
+    display: block;
   }
 
   .feature-description {
@@ -198,16 +203,24 @@
   @media (max-width: 1200px) {
     .feature-container {
       flex-direction: column;
+      align-items: flex-start;
       gap: 64px;
     }
     
     .feature-content, .feature-visual {
       width: 100%;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .desktop-br {
+      display: none;
     }
     
     .feature-visual {
       height: auto;
       aspect-ratio: 1/1;
+      align-self: center;
     }
   }
 </style>

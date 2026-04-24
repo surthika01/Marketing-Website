@@ -6,8 +6,8 @@
   --text-primary: #FFFFFF;
   --text-secondary: #A1A1AA;
   
-  --accent-primary: #6B4CFF; /* Purple from button */
-  --accent-hover: #8066FF;
+  --accent-primary: #6852D6; /* Brand.dark/09 from Figma */
+  --accent-hover: #7A63FF;
   
   /* Gradient for text */
   --gradient-text: linear-gradient(180deg, #FFFFFF 0%, #6A55D7 126.95%);
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px; /* Slightly rounded, not full pill in Figma */
+  border-radius: 12px; /* From Figma Screenshot 4 */
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
   background: var(--accent-primary);
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 16px;
 }
 
 .btn-primary:hover {
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   color: var(--text-primary);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 10px 20px;
+  padding: 12px 16px;
 }
 
 .btn-secondary:hover {

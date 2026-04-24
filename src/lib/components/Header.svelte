@@ -20,31 +20,32 @@
       <a href="#pricing">Pricing</a>
     </nav>
 
-    <!-- Actions (gap: 16px, width: 197) -->
-    <div class="actions">
-      <a href="#login" class="login-link">Log in</a>
-      <a href="#demo" class="btn btn-primary demo-btn">Schedule a demo</a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button
-      class="mobile-menu-btn"
-      aria-label="Toggle Menu"
-      onclick={toggleMenu}
-    >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
+    <div class="nav-right">
+      <div class="actions">
+        <a href="#login" class="login-link">Log in</a>
+        <a href="#demo" class="btn btn-secondary demo-btn">Schedule a demo</a>
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <button
+        class="mobile-menu-btn"
+        aria-label="Toggle Menu"
+        onclick={toggleMenu}
       >
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </div>
 
   {#if isMenuOpen}
@@ -55,7 +56,7 @@
       <a href="#resources" onclick={toggleMenu}>Resources</a>
       <a href="#pricing" onclick={toggleMenu}>Pricing</a>
       <a href="#login" class="login-link" onclick={toggleMenu}>Log in</a>
-      <a href="#demo" class="btn btn-primary" onclick={toggleMenu}
+      <a href="#demo" class="btn btn-secondary" onclick={toggleMenu}
         >Schedule a demo</a
       >
     </nav>
@@ -65,15 +66,18 @@
 <style>
   .header {
     width: 100%;
-    /* border-bottom removed based on screenshot, pure black/dark bg */
     background: var(--bg-primary);
+    border-bottom: 1px solid #1C1C24;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
   .nav-container {
     max-width: 1440px;
-    height: 68px;
+    height: 60px;
     margin: 0 auto;
-    padding: 16px 32px;
+    padding: 12px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,32 +111,49 @@
     color: #fff;
   }
 
-  .actions {
-    display: none;
+  .nav-right {
+    display: flex;
     align-items: center;
-    gap: 16px; /* Exact gap from instructions */
+    gap: 12px;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .demo-btn {
+    display: none;
+    border-radius: 8px;
   }
 
   .login-link {
     font-size: 14px;
     font-weight: 500;
-    color: #e4e4e7;
+    color: #FAFAFF;
   }
 
   .login-link:hover {
     color: #fff;
   }
 
-  .demo-btn {
-    border-radius: 8px; /* Based on screenshot */
-  }
-
   .mobile-menu-btn {
     display: block;
-    background: transparent;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
     color: #fff;
     cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .mobile-menu-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 
   .mobile-nav {
@@ -149,11 +170,15 @@
   }
 
   @media (min-width: 900px) {
+    .nav-container {
+      height: 68px;
+      padding: 16px 32px;
+    }
     .desktop-nav {
       display: flex;
     }
-    .actions {
-      display: flex;
+    .demo-btn {
+      display: inline-flex;
     }
     .mobile-menu-btn {
       display: none;

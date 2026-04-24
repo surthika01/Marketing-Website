@@ -1,6 +1,16 @@
 <script lang="ts">
   import { base } from '$app/paths';
   import footerLogo from '$lib/assets/CometChat Logo.png';
+  
+  let openSection = $state<string | null>(null);
+
+  function toggleSection(section: string) {
+    if (openSection === section) {
+      openSection = null;
+    } else {
+      openSection = section;
+    }
+  }
 </script>
 
 <footer class="footer">
@@ -14,8 +24,11 @@
     <div class="footer-grid">
       <!-- Column 1: Platform -->
       <div class="link-col">
-        <h4>Platform</h4>
-        <nav>
+        <button class="accordion-header" onclick={() => toggleSection('platform')}>
+          <h4>Platform</h4>
+          <span class="toggle-icon">{openSection === 'platform' ? '−' : '+'}</span>
+        </button>
+        <nav class={openSection === 'platform' ? 'open' : ''}>
           <a href="#chat">Chat & Messaging</a>
           <a href="#voice">Voice & Video Calls</a>
           
@@ -34,8 +47,11 @@
 
       <!-- Column 2: Solutions -->
       <div class="link-col">
-        <h4>Solutions</h4>
-        <nav>
+        <button class="accordion-header" onclick={() => toggleSection('solutions')}>
+          <h4>Solutions</h4>
+          <span class="toggle-icon">{openSection === 'solutions' ? '−' : '+'}</span>
+        </button>
+        <nav class={openSection === 'solutions' ? 'open' : ''}>
           <span class="sub-header">By Use cases</span>
           <a href="#on-demand">On-demand</a>
           <a href="#marketplaces">Online Marketplaces</a>
@@ -54,8 +70,11 @@
 
       <!-- Column 3: Developers -->
       <div class="link-col">
-        <h4>Developers</h4>
-        <nav>
+        <button class="accordion-header" onclick={() => toggleSection('developers')}>
+          <h4>Developers</h4>
+          <span class="toggle-icon">{openSection === 'developers' ? '−' : '+'}</span>
+        </button>
+        <nav class={openSection === 'developers' ? 'open' : ''}>
           <a href="#docs">Docs</a>
           <a href="#sample-apps">Sample Apps</a>
           <a href="#apis">APIs</a>
@@ -73,8 +92,11 @@
 
       <!-- Column 4: Resources -->
       <div class="link-col">
-        <h4>Resources</h4>
-        <nav>
+        <button class="accordion-header" onclick={() => toggleSection('resources')}>
+          <h4>Resources</h4>
+          <span class="toggle-icon">{openSection === 'resources' ? '−' : '+'}</span>
+        </button>
+        <nav class={openSection === 'resources' ? 'open' : ''}>
           <a href="#templates">Templates</a>
           <a href="#tutorials">Tutorials</a>
           <a href="#blog">Blog</a>
@@ -90,8 +112,11 @@
 
       <!-- Column 5: Company -->
       <div class="link-col">
-        <h4>Company</h4>
-        <nav>
+        <button class="accordion-header" onclick={() => toggleSection('company')}>
+          <h4>Company</h4>
+          <span class="toggle-icon">{openSection === 'company' ? '−' : '+'}</span>
+        </button>
+        <nav class={openSection === 'company' ? 'open' : ''}>
           <a href="#careers">Careers</a>
           <a href="#partners">Partners</a>
           <a href="#pricing">Pricing</a>
@@ -140,6 +165,7 @@
   </div>
 </footer>
 
+
 <style>
   .footer {
     width: 100%;
@@ -178,10 +204,22 @@
     flex-wrap: wrap;
   }
 
-  .link-col {
-    display: flex;
-    flex-direction: column;
-    min-width: 180px;
+  .accordion-header {
+    display: none;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .toggle-icon {
+    color: #6852D6;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   .link-col h4 {
@@ -302,9 +340,32 @@
   }
 
   @media (max-width: 640px) {
+    .accordion-header {
+      display: flex;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 0;
+    }
+
+    .link-col h4 {
+      margin: 0;
+    }
+
+    nav {
+      display: none;
+      padding: 16px 0 24px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    nav.open {
+      display: flex;
+    }
+
     .footer-grid {
       grid-template-columns: 1fr;
+      gap: 0;
     }
+
     .footer-bottom {
       flex-direction: column;
       align-items: flex-start;

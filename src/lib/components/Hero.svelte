@@ -286,15 +286,37 @@
   @media (max-width: 1100px) {
     .hero-container {
       flex-direction: column;
-      text-align: center;
+      text-align: left;
+      align-items: flex-start;
+      gap: 32px;
     }
     
     .hero-content {
-      align-items: center;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .hero-title {
+      font-size: 32px; /* Smaller title for mobile */
+      line-height: 1.1;
     }
     
     .hero-description {
-      text-align: center;
+      text-align: left;
+      font-size: 16px; /* Smaller font for mobile */
+    }
+
+    .hero-actions {
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: auto;
+      gap: 12px;
+    }
+
+    .hero-visual {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1.2;
     }
     
     .logo-group {

@@ -81,11 +81,12 @@
   .logo {
     display: flex;
     align-items: center;
-  }
-
-  .logo img {
-    width: 128.8px;
-    height: 20px;
+    font-family: 'Satoshi Variable', var(--font-sans);
+    font-size: 24px;
+    font-weight: 700;
+    color: #FAFAFF;
+    text-decoration: none;
+    letter-spacing: -0.02em;
   }
 
   .desktop-nav {

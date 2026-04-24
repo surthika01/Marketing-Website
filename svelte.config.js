@@ -13,6 +13,9 @@ const config = {
 		adapter: adapter({
 			fallback: '404.html'
 		}),
+		paths: {
+			base: '/Marketing-Website'
+		},
 		prerender: {
 			handleMissingId: 'ignore'
 		}
